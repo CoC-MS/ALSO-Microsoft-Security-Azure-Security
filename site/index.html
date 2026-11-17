@@ -1,0 +1,382 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#006d78">
+  <meta name="description" content="ALSO Azure Security best practices: protect identity, networks, data and applications, monitor posture, log and audit, detect and respond to threats, and recover from attacks.">
+  <title>ALSO Azure Security Best Practices</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to guide</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#main" aria-label="ALSO Azure Security Best Practices home">
+        <img src="assets/also-logo.png" alt="ALSO" class="brand-logo" width="112" height="37">
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span class="brand-product">ALSO Azure Security Best Practices</span>
+      </a>
+      <div class="language-selector">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path></svg>
+        <select id="language-select" aria-label="Language">
+          <option value="en" lang="en" selected>English</option>
+          <option value="de" lang="de" disabled>Deutsch (coming soon)</option>
+          <option value="fr" lang="fr" disabled>Fran&ccedil;ais (coming soon)</option>
+          <option value="es" lang="es" disabled>Espa&ntilde;ol (coming soon)</option>
+          <option value="ru" lang="ru" disabled>&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081; (coming soon)</option>
+          <option value="it" lang="it" disabled>Italiano (coming soon)</option>
+          <option value="pl" lang="pl" disabled>Polski (coming soon)</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <nav class="chapter-nav" aria-label="Guide chapters">
+    <div class="nav-inner">
+      <a href="#overview" aria-current="location">Overview</a>
+      <a href="#identity"><span>01</span> Identity &amp; access</a>
+      <a href="#network"><span>02</span> Infrastructure &amp; network</a>
+      <a href="#data"><span>03</span> Data &amp; applications</a>
+      <a href="#posture"><span>04</span> Posture &amp; governance</a>
+      <a href="#logging"><span>05</span> Logging &amp; auditing</a>
+      <a href="#threats"><span>06</span> Threat detection &amp; response</a>
+      <a href="#resilience"><span>07</span> Resilience &amp; recovery</a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="hero section-width" id="overview" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Zero Trust. Secure by design.</p>
+        <h1 id="hero-title">Azure Security<br><span>best practices.</span></h1>
+        <p class="hero-subtitle">Seven pillars for a secure Azure environment</p>
+        <p class="hero-description">A practical guide to protecting identities, infrastructure, data and applications, measuring your security posture, detecting threats and recovering from attacks.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#pillars">Explore the seven pillars <span aria-hidden="true">&#8595;</span></a>
+          <a class="text-link" href="#identity">Start with identity <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </div>
+
+      <figure class="architecture" aria-labelledby="architecture-title">
+        <div class="diagram-topline"><span class="eyebrow">The big picture</span><span class="diagram-label">Simplified overview</span></div>
+        <h2 id="architecture-title">Security is built in layers.</h2>
+        <div class="diagram-people"><span class="people-icon" aria-hidden="true">&#9675;</span> Verify explicitly &middot; Use least privilege &middot; Assume breach</div>
+        <div class="connector" aria-hidden="true"></div>
+        <div class="service-boundary">
+          <span class="boundary-label">Your Azure environment</span>
+          <div class="data-nodes"><span>Identity &amp; access</span><span>Infrastructure &amp; network</span><span>Data &amp; applications</span><span>Posture &amp; governance</span><span>Logging &amp; auditing</span><span>Threat detection &amp; response</span><span>Resilience &amp; recovery</span></div>
+        </div>
+        <figcaption>Each pillar answers a practical question: who has access, how are workloads protected, where is the risk, and how do we recover.</figcaption>
+        <a class="diagram-source" href="https://learn.microsoft.com/en-us/azure/security/fundamentals/overview">Azure security documentation <span aria-hidden="true">&#8599;</span></a>
+      </figure>
+    </section>
+
+    <section class="packages section-width" id="pillars" aria-labelledby="pillars-title">
+      <div class="section-heading"><div><p class="eyebrow">Your security plan</p><h2 id="pillars-title">Seven pillars of Azure security.</h2></div></div>
+      <div class="package-grid">
+        <a class="package-card" href="#identity"><span class="package-icon" aria-hidden="true">01</span><h3>Protect Azure identity and access</h3><p>Who can access your environment, and what are they allowed to do?</p><span class="card-action">Go to chapter <span aria-hidden="true">&#8595;</span></span></a>
+        <a class="package-card" href="#network"><span class="package-icon" aria-hidden="true">02</span><h3>Infrastructure &amp; network security</h3><p>How are cloud workloads, servers and networks protected against unauthorized access and attacks?</p><span class="card-action">Go to chapter <span aria-hidden="true">&#8595;</span></span></a>
+        <a class="package-card" href="#data"><span class="package-icon" aria-hidden="true">03</span><h3>Data &amp; application security</h3><p>How are sensitive data, databases, storage and applications protected?</p><span class="card-action">Go to chapter <span aria-hidden="true">&#8595;</span></span></a>
+        <a class="package-card" href="#posture"><span class="package-icon" aria-hidden="true">04</span><h3>Cloud security posture &amp; governance</h3><p>How do we identify misconfigurations, assess security risks and maintain a secure cloud environment?</p><span class="card-action">Go to chapter <span aria-hidden="true">&#8595;</span></span></a>
+        <a class="package-card" href="#logging"><span class="package-icon" aria-hidden="true">05</span><h3>Azure security logging &amp; auditing</h3><p>Do we have sufficient logging to detect suspicious activity and support forensic investigations?</p><span class="card-action">Go to chapter <span aria-hidden="true">&#8595;</span></span></a>
+        <a class="package-card" href="#threats"><span class="package-icon" aria-hidden="true">06</span><h3>Threat detection &amp; response</h3><p>How do we detect, investigate and respond to security incidents?</p><span class="card-action">Go to chapter <span aria-hidden="true">&#8595;</span></span></a>
+        <a class="package-card" href="#resilience"><span class="package-icon" aria-hidden="true">07</span><h3>Resilience &amp; recovery</h3><p>How do we maintain business operations and recover from cyberattacks, ransomware or infrastructure failures?</p><span class="card-action">Go to chapter <span aria-hidden="true">&#8595;</span></span></a>
+      </div>
+    </section>
+
+    <section class="guide-section section-width" id="identity" aria-labelledby="identity-title">
+      <div class="chapter-heading">
+        <div class="chapter-number">01</div>
+        <div><p class="eyebrow">Start with your people</p><h2 id="identity-title">Protect Azure identity and access</h2><p>Who can access your environment, and what are they allowed to do?</p></div>
+        <span class="chapter-category">Microsoft Entra</span>
+      </div>
+      <div class="guide-body">
+        <article class="step" id="identity-overview">
+          <div class="step-marker">1</div><div class="step-content">
+            <h3>Objective</h3>
+            <p>Reduce identity-related risk by protecting users, administrators, and workload identities from unauthorized access, misuse, and compromise.</p>
+            <p>Microsoft's approach is based on Zero Trust principles: <strong>verify explicitly</strong>, <strong>use least privilege</strong> and <strong>assume breach</strong>.</p>
+            <details class="visual-reference"><summary>See the Zero Trust identity reference</summary><figure><img src="assets/az-image1.png" alt="Zero Trust identity protection overview diagram." width="954" height="663" loading="lazy"><figcaption>Zero Trust: verify explicitly, use least privilege and assume breach.</figcaption></figure></details>
+          </div>
+        </article>
+        <article class="step" id="identity-practices">
+          <div class="step-marker">2</div><div class="step-content">
+            <h3>Key security practices</h3>
+            <ul class="practice-list">
+              <li><strong>Multifactor Authentication (MFA):</strong> Enforce MFA, preferably phishing-resistant authentication for privileged users.</li>
+              <li><strong>Conditional Access:</strong> Apply access policies based on identity, location, device compliance and risk.</li>
+              <li><strong>Privileged Access Management:</strong> Use Microsoft Entra PIM for just-in-time, time-limited administrative access.</li>
+              <li><strong>Least Privilege:</strong> Apply Azure RBAC and minimize excessive permissions.</li>
+              <li><strong>Workload Identity Protection:</strong> Secure service principals, managed identities, application permissions and credentials.</li>
+              <li><strong>Identity Monitoring:</strong> Detect risky sign-ins, suspicious authentication and privilege escalation.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="step" id="identity-technologies">
+          <div class="step-marker">3</div><div class="step-content">
+            <h3>Microsoft technologies</h3>
+            <ul class="tech-list"><li>Microsoft Entra ID</li><li>Conditional Access</li><li>Entra ID Protection</li><li>PIM</li><li>Defender for Identity</li></ul>
+            <div class="resource-links"><span class="portal-tag">For more information see</span><a class="resource-link" href="https://learn.microsoft.com/en-us/azure/security/fundamentals/identity-management-best-practices">Protecting Azure identity and access: Microsoft security best practices <span aria-hidden="true">&#8599;</span></a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="guide-section section-width" id="network" aria-labelledby="network-title">
+      <div class="chapter-heading">
+        <div class="chapter-number">02</div>
+        <div><p class="eyebrow">Shrink the attack surface</p><h2 id="network-title">Infrastructure &amp; network security</h2><p>How are cloud workloads, servers and networks protected against unauthorized access and attacks?</p></div>
+        <span class="chapter-category">Azure networking</span>
+      </div>
+      <div class="guide-body">
+        <article class="step" id="network-overview">
+          <div class="step-marker">1</div><div class="step-content">
+            <h3>Objective</h3>
+            <p>Reduce the infrastructure attack surface and protect communication between cloud resources.</p>
+            
+            <details class="visual-reference"><summary>See the Azure network security reference</summary><figure><img src="assets/az-image2.png" alt="Azure network security architecture diagram." width="945" height="452" loading="lazy"><figcaption>Source of the picture: learn.microsoft.com, Azure network security.</figcaption></figure></details>
+          </div>
+        </article>
+        <article class="step" id="network-practices">
+          <div class="step-marker">2</div><div class="step-content">
+            <h3>Key security practices</h3>
+            <ul class="practice-list">
+              <li><strong>Network Segmentation:</strong> Separate workloads using VNets, subnets and NSGs.</li>
+              <li><strong>Network Traffic Filtering:</strong> Deploy Azure Firewall for centralized traffic inspection and filtering and use NSGs to restrict traffic based on IP addresses, ports and protocols.</li>
+              <li><strong>Public Exposure Reduction:</strong> Minimize public IP addresses and use Private Endpoints.</li>
+              <li><strong>Secure Remote Access:</strong> Use Azure Bastion, VPN Gateway and just-in-time VM access.</li>
+              <li><strong>Workload Hardening:</strong> Apply secure configurations, patching and vulnerability management.</li>
+              <li><strong>DDoS &amp; Application Protection:</strong> Use Azure DDoS Protection and Web Application Firewall (WAF).</li>
+            </ul>
+          </div>
+        </article>
+        <article class="step" id="network-technologies">
+          <div class="step-marker">3</div><div class="step-content">
+            <h3>Microsoft technologies</h3>
+            <ul class="tech-list"><li>Azure Firewall</li><li>NSGs</li><li>Azure Bastion</li><li>Private Link</li><li>Azure DDoS Protection</li><li>Azure Application Gateway</li><li>Defender for Servers</li></ul>
+            <div class="resource-links"><span class="portal-tag">For more information see</span><a class="resource-link" href="https://learn.microsoft.com/en-us/azure/networking/security/network-security">Azure network security <span aria-hidden="true">&#8599;</span></a><a class="resource-link" href="https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-servers-overview">Defender for servers <span aria-hidden="true">&#8599;</span></a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="guide-section section-width" id="data" aria-labelledby="data-title">
+      <div class="chapter-heading">
+        <div class="chapter-number">03</div>
+        <div><p class="eyebrow">Protect what matters most</p><h2 id="data-title">Data &amp; application security</h2><p>How are sensitive data, databases, storage and applications protected?</p></div>
+        <span class="chapter-category">Data protection</span>
+      </div>
+      <div class="guide-body">
+        <article class="step" id="data-overview">
+          <div class="step-marker">1</div><div class="step-content">
+            <h3>Objective</h3>
+            <p>Prevent data exposure, unauthorized access, data leakage and application-level attacks.</p>
+            
+            
+          </div>
+        </article>
+        <article class="step" id="data-practices">
+          <div class="step-marker">2</div><div class="step-content">
+            <h3>Key security practices</h3>
+            <ul class="practice-list">
+              <li><strong>Encryption:</strong> Protect data at rest and in transit using encryption and TLS.</li>
+              <li><strong>Key &amp; Secret Management:</strong> Use Azure Key Vault to manage encryption keys, certificates and secrets.</li>
+              <li><strong>Data Classification:</strong> Identify and classify sensitive information.</li>
+              <li><strong>Data Loss Prevention:</strong> Implement DLP policies to prevent unauthorized sharing and data leakage.</li>
+              <li><strong>Storage &amp; Database Protection:</strong> Restrict public access, enforce access controls and enable threat detection.</li>
+              <li><strong>Application Security:</strong> Implement secure development practices, vulnerability scanning and API protection.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="step" id="data-technologies">
+          <div class="step-marker">3</div><div class="step-content">
+            <h3>Microsoft technologies</h3>
+            <ul class="tech-list"><li>Azure Key Vault</li><li>Microsoft Purview</li><li>Defender for Storage</li><li>Defender for SQL</li><li>Defender for Cloud</li><li>Azure WAF</li></ul>
+            <div class="resource-links"><span class="portal-tag">For more information see</span><a class="resource-link" href="https://learn.microsoft.com/en-us/azure/security/fundamentals/data-encryption-best-practices">Azure data security and encryption best practices <span aria-hidden="true">&#8599;</span></a><a class="resource-link" href="https://learn.microsoft.com/en-us/azure/azure-sql/database/secure-database?view=azuresql">Secure your Azure SQL Database <span aria-hidden="true">&#8599;</span></a><a class="resource-link" href="https://learn.microsoft.com/en-us/purview/data-classification-overview">Microsoft Purview classifiers overview <span aria-hidden="true">&#8599;</span></a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="guide-section section-width" id="posture" aria-labelledby="posture-title">
+      <div class="chapter-heading">
+        <div class="chapter-number">04</div>
+        <div><p class="eyebrow">Know where you stand</p><h2 id="posture-title">Cloud security posture &amp; governance</h2><p>How do we identify misconfigurations, assess security risks and maintain a secure cloud environment?</p></div>
+        <span class="chapter-category">Defender for Cloud</span>
+      </div>
+      <div class="guide-body">
+        <article class="step" id="posture-overview">
+          <div class="step-marker">1</div><div class="step-content">
+            <h3>Objective</h3>
+            <p>Continuously assess cloud security posture, enforce security standards and prioritize the most critical risks.</p>
+            
+            
+          </div>
+        </article>
+        <article class="step" id="posture-practices">
+          <div class="step-marker">2</div><div class="step-content">
+            <h3>Key security practices</h3>
+            <ul class="practice-list">
+              <li><strong>Security Posture Management:</strong> Continuously assess Azure resources for security weaknesses and misconfigurations.</li>
+              <li><strong>Secure Score:</strong> Measure security posture and prioritize recommended improvements.</li>
+              <li><strong>Attack Path Analysis:</strong> Identify combinations of vulnerabilities, exposures and excessive permissions that could lead to critical resources.</li>
+              <li><strong>Security Recommendations:</strong> Identify and remediate configuration weaknesses.</li>
+              <li><strong>Azure Policy:</strong> Enforce organizational security requirements and compliance standards.</li>
+              <li><strong>Regulatory Compliance:</strong> Assess cloud environments against standards such as ISO 27001, NIST and CIS.</li>
+              <li><strong>Multicloud Governance:</strong> Apply consistent security visibility and governance across Azure, AWS and GCP.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="step" id="posture-technologies">
+          <div class="step-marker">3</div><div class="step-content">
+            <h3>Microsoft technologies</h3>
+            <ul class="tech-list"><li>Microsoft Defender for Cloud (CSPM and Defender CSPM)</li><li>Azure Policy</li><li>Azure Resource Manager</li><li>Azure Arc</li></ul>
+            <div class="resource-links"><span class="portal-tag">For more information see</span><a class="resource-link" href="https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-cloud-security-posture-management">What is Cloud Security Posture Management (CSPM) <span aria-hidden="true">&#8599;</span></a></div>
+          </div>
+        </article>
+        <article class="step" id="defender-for-cloud">
+          <div class="step-marker">+</div><div class="step-content">
+            <h3>Getting started with Microsoft Defender for Cloud</h3>
+            <p>Defender for Cloud helps organizations understand how secure their cloud infrastructure is, identify security weaknesses, prioritize risks and detect threats against cloud workloads.</p>
+            <div class="portal-links"><span class="portal-tag">Direct link to configuration in portal</span><a class="resource-link" href="https://portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/0">Open Defender for Cloud <span aria-hidden="true">&#8599;</span></a></div>
+            <h4>Onboarding steps</h4>
+            <ol class="onboarding-list">
+              <li>Navigate to the Azure portal using an account with <strong>Owner</strong> or <strong>Contributor / Security Admin</strong> permissions on the target subscription.</li>
+              <li>Search for and select <strong>Microsoft Defender for Cloud</strong> from the top search bar or services menu.</li>
+              <li><strong>Run the Getting Started wizard:</strong> if the subscription is not yet onboarded, opening the dashboard as an Owner will trigger the Getting Started or onboarding experience to register <code>Microsoft.Security</code>.</li>
+            </ol>
+            <details class="visual-reference"><summary>See the Defender for Cloud onboarding reference</summary><figure><img src="assets/az-image3.png" alt="Microsoft Defender for Cloud Getting started experience in the Azure portal." width="1428" height="694" loading="lazy"><figcaption>The Getting started experience in Microsoft Defender for Cloud.</figcaption></figure></details>
+            <div class="plan-grid">
+              <div class="plan-card"><span class="tier-label">Free capabilities</span><h4>Security posture management</h4><p>Understand and improve the security posture of Azure resources without additional Defender plans.</p><ul><li>Continuous assessment of the security configuration of your cloud resources</li><li>Security recommendations to fix misconfigurations and weaknesses</li><li>Secure score summarizing your current security situation</li></ul></div>
+              <div class="plan-card"><span class="tier-label">Paid capabilities</span><h4>Defender plans</h4><p>Enable cloud protection and threat detection.</p><p><strong>A. Defender CSPM:</strong> advanced cloud security posture management.</p><ul><li>Attack path analysis</li><li>Cloud Security Explorer</li><li>Data Security Posture Management (DSPM)</li><li>Governance workflows</li></ul><p><strong>B. Defender workload plans (CWPP)</strong></p><ul><li>Threat alerts</li><li>Just-In-Time (JIT) VM access</li><li>Malware scanning and vulnerability assessment for specific workloads (for example Defender for Servers, Defender for Containers)</li></ul></div>
+            </div>
+            <div class="resource-links"><a href="https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction">What is Microsoft Defender for Cloud <span aria-hidden="true">&#8599;</span></a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="guide-section section-width" id="logging" aria-labelledby="logging-title">
+      <div class="chapter-heading">
+        <div class="chapter-number">05</div>
+        <div><p class="eyebrow">See what happened</p><h2 id="logging-title">Azure security logging &amp; auditing</h2><p>Do we have sufficient logging to detect suspicious activity and support forensic investigations?</p></div>
+        <span class="chapter-category">Azure Monitor</span>
+      </div>
+      <div class="guide-body">
+        <article class="step" id="logging-overview">
+          <div class="step-marker">1</div><div class="step-content">
+            <h3>Why it matters</h3>
+            <p>Do we have sufficient logging to detect suspicious activity and support forensic investigations?</p>
+            
+            
+          </div>
+        </article>
+        <article class="step" id="logging-practices">
+          <div class="step-marker">2</div><div class="step-content">
+            <h3>Key security practices</h3>
+            <ul class="practice-list">
+              <li><strong>Enable Activity Logs:</strong> Monitor administrative operations and Azure resource changes.</li>
+              <li><strong>Enable diagnostic logging:</strong> Collect logs from critical Azure services.</li>
+              <li><strong>Centralize log collection:</strong> Use Azure Monitor, Log Analytics and Microsoft Sentinel.</li>
+              <li><strong>Monitor identity activities:</strong> Track sign-ins, audit events and suspicious authentication.</li>
+              <li><strong>Configure security alerts:</strong> Detect privilege escalation, unusual access and suspicious network activity.</li>
+              <li><strong>Protect logs:</strong> Restrict access and configure appropriate retention and integrity controls.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="step" id="logging-technologies">
+          <div class="step-marker">3</div><div class="step-content">
+            <h3>Microsoft technologies</h3>
+            <ul class="tech-list"><li>Azure Monitor</li><li>Log Analytics Workspace</li><li>Microsoft Sentinel</li><li>Microsoft Defender for Cloud</li><li>Microsoft Entra ID</li></ul>
+            <div class="resource-links"><span class="portal-tag">For more information see</span><a class="resource-link" href="https://learn.microsoft.com/en-us/azure/security/fundamentals/log-audit">Azure security logging and auditing <span aria-hidden="true">&#8599;</span></a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="guide-section section-width" id="threats" aria-labelledby="threats-title">
+      <div class="chapter-heading">
+        <div class="chapter-number">06</div>
+        <div><p class="eyebrow">Detect early, respond fast</p><h2 id="threats-title">Threat detection &amp; response</h2><p>How do we detect, investigate and respond to security incidents?</p></div>
+        <span class="chapter-category">Defender XDR &amp; Sentinel</span>
+      </div>
+      <div class="guide-body">
+        <article class="step" id="threats-overview">
+          <div class="step-marker">1</div><div class="step-content">
+            <h3>Objective</h3>
+            <p>Identify threats early, correlate security signals and reduce the time required to investigate and contain attacks.</p>
+            
+            
+          </div>
+        </article>
+        <article class="step" id="threats-practices">
+          <div class="step-marker">2</div><div class="step-content">
+            <h3>Key security practices</h3>
+            <ul class="practice-list">
+              <li><strong>Threat Detection:</strong> Identify suspicious activities, malicious behavior and potential compromises.</li>
+              <li><strong>Security Monitoring:</strong> Collect and analyze security telemetry across cloud workloads, identities and networks.</li>
+              <li><strong>Incident Correlation:</strong> Correlate related alerts into incidents to provide a unified view of attacks.</li>
+              <li><strong>Threat Hunting:</strong> Proactively search for suspicious activities using KQL and threat intelligence.</li>
+              <li><strong>Automated Response:</strong> Use playbooks and automation rules to execute predefined response actions.</li>
+              <li><strong>AI-Assisted Security Operations:</strong> Use Security Copilot and AI agents to support investigation, analysis and response.</li>
+              <li><strong>Incident Management:</strong> Establish investigation, escalation, containment and remediation procedures.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="step" id="threats-technologies">
+          <div class="step-marker">3</div><div class="step-content">
+            <h3>Microsoft technologies</h3>
+            <ul class="tech-list"><li>Microsoft Defender XDR</li><li>Microsoft Sentinel</li><li>Microsoft Security Copilot</li><li>Defender for Cloud</li><li>Logic Apps</li></ul>
+            <div class="resource-links"><span class="portal-tag">For more information see</span><a class="resource-link" href="https://learn.microsoft.com/en-us/azure/security/fundamentals/threat-detection">Azure threat protection <span aria-hidden="true">&#8599;</span></a><a class="resource-link" href="https://learn.microsoft.com/en-us/azure/security/fundamentals/incident-response-overview">Incident response overview for Azure <span aria-hidden="true">&#8599;</span></a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="guide-section section-width" id="resilience" aria-labelledby="resilience-title">
+      <div class="chapter-heading">
+        <div class="chapter-number">07</div>
+        <div><p class="eyebrow">Keep operating, recover quickly</p><h2 id="resilience-title">Resilience &amp; recovery</h2><p>How do we maintain business operations and recover from cyberattacks, ransomware or infrastructure failures?</p></div>
+        <span class="chapter-category">Business continuity</span>
+      </div>
+      <div class="guide-body">
+        <article class="step" id="resilience-overview">
+          <div class="step-marker">1</div><div class="step-content">
+            <h3>Objective</h3>
+            <p>Minimize operational disruption, prevent data loss and ensure that critical services can be restored.</p>
+            
+            
+          </div>
+        </article>
+        <article class="step" id="resilience-practices">
+          <div class="step-marker">2</div><div class="step-content">
+            <h3>Key security practices</h3>
+            <ul class="practice-list">
+              <li><strong>Backup &amp; Recovery:</strong> Implement regular backups and test recovery procedures.</li>
+              <li><strong>Ransomware Protection:</strong> Protect backups against unauthorized modification and deletion using immutable storage and appropriate access controls.</li>
+              <li><strong>Disaster Recovery:</strong> Establish recovery strategies for critical Azure workloads.</li>
+              <li><strong>Business Continuity:</strong> Define Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO).</li>
+              <li><strong>High Availability:</strong> Use availability zones, redundancy and resilient architectures.</li>
+              <li><strong>Recovery Testing:</strong> Regularly test backup restoration and disaster recovery procedures.</li>
+              <li><strong>Incident Preparedness:</strong> Establish incident response plans and recovery playbooks.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="step" id="resilience-technologies">
+          <div class="step-marker">3</div><div class="step-content">
+            <h3>Microsoft technologies</h3>
+            <ul class="tech-list"><li>Azure Backup</li><li>Azure Site Recovery</li><li>Azure Storage immutable blobs</li><li>Azure Availability Zones</li><li>Microsoft Defender for Cloud</li></ul>
+            <div class="resource-links"><span class="portal-tag">For more information see</span><a class="resource-link" href="https://learn.microsoft.com/en-us/azure/reliability/overview">Reliability in Azure <span aria-hidden="true">&#8599;</span></a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="document-note section-width"><p><a href="https://github.com/CoC-MS/ALSO-Microsoft-Security-Azure-Security/issues">Report an issue or suggest an improvement <span aria-hidden="true">&#8599;</span></a><span>Guide reviewed: November 2026</span></p></div>
+  </main>
+  <footer class="site-footer"><p>ALSO Microsoft Security Central Technical Team (c) 2026 All rights reserved</p><a href="#main">Back to top <span aria-hidden="true">&#8593;</span></a></footer>
+</body>
+</html>
