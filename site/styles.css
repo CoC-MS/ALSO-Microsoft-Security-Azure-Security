@@ -340,3 +340,4 @@ code { color: var(--primary-dark); background: #eaf3f3; font: 600 .78rem "Cascad
 .plan-card ul { margin: 10px 0 0; padding-left: 20px; }
 .language-selector option:disabled { color: #8a99a0; }
 @media (max-width: 760px) { .plan-grid { grid-template-columns: 1fr; } }
+.onboarding-list details { margin-top: 10px; }
